@@ -14,8 +14,12 @@ namespace Ryhmätyöprojektiomaversio
             string database_path = @"membership_database.json";
             List<Asiakas> database = new List<Asiakas>();
 
+
+            // tehdään lista alkutilanteesta, eli json tiedostoon jo valmiiksi tallennetuista asiakkaista.
+
             List<Asiakas> alkutilanne = JsonConvert.DeserializeObject<List<Asiakas>>(File.ReadAllText(database_path));
             
+            //database.Add(alkutilanne);
 
             //Toistaiseksi vasta 1 ominaisuus, eli asiakkaan lisääminen Asiakas-luokan avulla.
 
